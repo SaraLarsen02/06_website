@@ -1,0 +1,1508 @@
+/* ------------------------------ Reset ------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ------------------------------ Menu (fra tidligere opgave med nye rettelser) ------------------------------ */
+header {
+    display: flex;
+    padding: 20px 32px 10px 10px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.4vw;
+    /* Får menuen til at være højrestillet */
+    justify-content: right;
+    /* Får byttet om på logo og menupunkter */
+    flex-direction: row-reverse;
+  }
+
+.header_forside {
+    display: flex;
+    padding: 20px 32px 10px 10px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.4vw;
+    /* Får menuen til at være højrestillet */
+    justify-content: right;
+    /* Får byttet om på logo og menupunkter */
+    flex-direction: row-reverse;
+  }
+
+.header_fo_mobil {
+    display: none;
+}
+  
+  .logo img {
+    width: auto;
+    height: 87px;
+  }
+
+  /* Layout på logo */
+  .logo {
+    text-decoration: none;
+    font-size: 2.5vw;
+  }
+
+  /* Effekt på logo */
+  .logo :hover {
+    transform: scale(1.1);
+    transition: 500ms ease;
+  }
+  
+  nav {
+    display: flex;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 51px;
+    gap: 15px;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: end;
+  }
+  
+  /* Effekt på menupunkter */
+  .menu a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+    transition: 500ms ease;
+  }
+  
+  .burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .burger .line {
+    width: 112%;
+    height: 5px;
+    background-color: #000000;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+  .burger {
+    display: none;
+  }
+
+  .ikon {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80px;
+    justify-content: space-between;
+  }
+
+  .ikon_søg {
+    height: 25px;
+    width: 25px;
+  }
+
+  .ikon_kurv {
+    height: 25px;
+    width: 25px;
+  }
+
+  .menu {
+    justify-content: left;
+  }
+
+  .navigationbar {
+    display: flex;
+    gap: 50px;
+  }
+
+  @media (max-width: 800px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 32px 16px 10px;
+    }
+
+    .header_forside {
+        display: none;
+    }
+
+    .header_fo_mobil {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .menu {
+      display: none;
+    }
+    .burger {
+      display: block;
+      margin-left: 5px;
+    margin-top: 10px;
+    }
+
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+  
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+  
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+  
+    nav.active .menu {
+      display: block;
+      background-color: #fff;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+  
+    nav.active .menu li {
+      margin: 10px 20px;
+    }
+  
+    nav.active .menu a {
+      font-size: 24px;
+    }
+
+    .ikon {
+        display: none;
+    }
+
+    .logo img {
+        width: auto;
+        height: 46px;
+      }
+  }  
+
+
+
+/* ------------------------------ MOBIL ------------------------------ */
+@media (max-width: 800px) {
+/* ------------------------------ Baggrund ------------------------------ */
+.baggrund_forside {
+    background-image: url(indhold/gitter/gitter_mob_forside.webp);
+    background-size: 100%;
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_portfolio {
+    background-image: url(indhold/gitter/gitter_mob_portfolio.webp);
+    background-size: 100%;
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_tema02 {
+    background-image: url(indhold/gitter/gitter_mob_tema2.webp);
+    background-size: 100%;
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_tema03 {
+    background-image: url(indhold/gitter/gitter_mob_tema3.webp);
+    background-size: 100%;
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_tema04 {
+    background-image: url(indhold/gitter/gitter_mob_tema4.webp);
+    background-size: 100%;
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_tema05 {
+    background-image: url(indhold/gitter/gitter_mob_tema5.webp);
+    background-size: 100%;
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_om {
+    background-image: url(indhold/gitter/gitter_mob_om.webp);
+    background-size: 100%;
+    padding-bottom: 70px;
+    background-repeat: no-repeat;
+}
+
+
+/* ------------------------------ Footer ------------------------------ */
+.grid_1-1-1_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+}
+
+.layout_footer_fo_1 {
+    margin: 45% 0 0 16%;
+}
+
+.layout_footer_fo_2 {
+    margin: 13% 25% 0 25%;
+}
+
+.layout_footer_fo_3 {
+    margin: 13% 0 0 34%;
+}
+
+.layout_footer_fo_4 {
+    margin: 14% 0 0 37%;
+}
+
+.layout_footer_po_1 {
+    margin: 63% 0 0 16%;
+}
+
+.layout_footer_po_2 {
+    margin: 13% 25% 0 25%;
+}
+
+.layout_footer_po_3 {
+    margin: 13% 0 0 34%;
+}
+
+.layout_footer_po_4 {
+    margin: 14% 0 0 39%;
+}
+
+.layout_footer_02_1 {
+    margin: 30% 0 0 16%;
+}
+
+.layout_footer_02_2 {
+    margin: 13% 25% 0 25%;
+}
+
+.layout_footer_02_3 {
+    margin: 13% 0 0 34%;
+}
+
+.layout_footer_02_4 {
+    margin: 14% 0 0 39%;
+}
+
+.layout_footer_03_1 {
+    margin: 42% 0 0 16%;
+}
+
+.layout_footer_03_2 {
+    margin: 13% 25% 0 25%;
+}
+
+.layout_footer_03_3 {
+    margin: 13% 0 0 34%;
+}
+
+.layout_footer_03_4 {
+    margin: 14% 0 0 39%;
+}
+
+.layout_footer_04_1 {
+    margin: 34% 0 0 16%;
+}
+
+.layout_footer_04_2 {
+    margin: 13% 25% 0 25%;
+}
+
+.layout_footer_04_3 {
+    margin: 13% 0 0 34%;
+}
+
+.layout_footer_04_4 {
+    margin: 14% 0 0 39%;
+}
+
+.layout_footer_05_1 {
+    margin: 31% 0 0 16%;
+}
+
+.layout_footer_05_2 {
+    margin: 13% 25% 0 25%;
+}
+
+.layout_footer_05_3 {
+    margin: 13% 0 0 34%;
+}
+
+.layout_footer_05_4 {
+    margin: 14% 0 0 39%;
+}
+
+.layout_footer_om_1 {
+    margin: 36% 0 0 16%;
+}
+
+.layout_footer_om_2 {
+    margin: 13% 25% 0 25%;
+}
+
+.layout_footer_om_3 {
+    margin: 13% 0 0 34%;
+}
+
+.layout_footer_om_4 {
+    margin: 14% 0 0 39%;
+}
+
+/* ------------------------------ Tekst ------------------------------ */
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 18vw;
+}
+
+h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 12vw;
+}
+
+h3 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 7vw;
+}
+
+h4 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 11vw;
+}
+
+h5 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 8vw;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3.6vw;
+    line-height: 1.6;
+}
+
+.tekst_afsnit {
+    margin-bottom: 3%;
+}
+
+.tekst_afsnit_om {
+    margin-bottom: 4%;
+}
+
+br {
+    display: none;
+}
+
+.tekst_om_mob {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 12vw;
+}
+
+/* ------------------------------ Grid ------------------------------ */
+.grid_1-1-1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5%;
+}
+
+.grid_1-1-1_mob {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+}
+
+.grid_1-1_boks {
+    display: grid;
+    gap: 4%;
+}
+
+.grid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5%;
+}
+
+.grid_1-3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.grid_3-1 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+/* ------------------------------ Layout ------------------------------ */
+/* ---------- Forside ---------- */
+.layout_fo_tek_e1 {
+    margin: 55px 0 0 6%;
+}
+
+.layout_fo_iko_e1 {
+    margin: 16% 5% 0 5%;
+}
+
+.layout_fo_tek_e2 {
+    margin: 14% 0 0 6%;
+}
+
+.layout_fo_img_e4 {
+    margin: 53% 8% 0 20%;
+}
+
+.layout_fo_tek_e4a {
+    margin: 9% 0 0 18%;
+}
+
+.layout_fo_tek_e4b {
+    margin: 6% 6% 0 18%;
+}
+
+.layout_fo_knap {
+    margin: 10% 20% 0 0;
+}
+
+.layout_fo_boks {
+    margin: 5% 18% 5% 7%;
+}
+
+/* ---------- Portfolio ---------- */
+.layout_al_tek_e1 {
+    margin: 4% 0 0 6%;
+}
+
+.layout_po_tek_e3a {
+    margin: 55% 0 0 6%;
+}
+
+.layout_po_tek_e3b {
+    display: grid;
+    gap: 11%;
+    margin: 14% 8% 0 12%;
+}
+
+.layout_po_boks {
+    margin: 12% 11% 5% 11%;
+}
+
+/* ---------- Tema 02 ---------- */
+.layout_al_tek_e2 {
+    margin: 4% 6% 0 8%;
+    display: grid;
+    gap: 32%;
+}
+
+.layout_al_knap {
+    margin: 25% 26% 0 9%;
+}
+
+.layout_02_img_e1 {
+    margin: 15% 12% 0 9%;
+}
+
+.layout_02_tek_e1 {
+    margin: 14% 6% 0 9%;
+}
+
+.layout_02_tek_e2 {
+    margin: 7% 7% 0 9%;
+}
+
+.layout_02_img_e2 {
+    margin: 9% 9% 0 9%;
+}
+
+.layout_02_img_e3 {
+    margin: 6% 35% 0 9%;
+}
+
+.layout_02_tek_e3 {
+    margin: 10% 6% 0 9%;
+}
+
+/* ---------- Tema 03 ---------- */
+.layout_al_knap_2 {
+    margin: 23% 20% 0 9%;
+    display: grid;
+    gap: 12%;
+}
+
+.layout_03_tek_e1 {
+    margin: 23% 5% 0 9%;
+}
+
+.layout_03_img_e2 {
+    margin: 9% 10% 0 9%;
+}
+
+.layout_03_tek_e2 {
+    margin: 7% 5% 0 9%;
+}
+
+.layout_03_tek_e3 {
+    margin: 14% 6% 0 9%;
+}
+
+.layout_03_img_e3 {
+    margin: 5% 15% 0 9%;
+}
+
+.layout_03_img_e4 {
+    margin: 11% 9% 0 9%;
+}
+
+.layout_03_tek_e4 {
+    margin: 11% 5% 0 9%;
+}
+
+.layout_03_tek_e5 {
+    margin: 5% 5% 0 9%;
+}
+
+.layout_03_img_e5a {
+    margin: 24% 10% 0 9%;
+}
+
+.layout_03_img_e5b {
+    margin: 17% 30% 0 30%;
+}
+
+.layout_03_tek_e6 {
+    margin: 19% 5% 0 9%;
+}
+
+.layout_03_img_e6 {
+    margin: 6% 8% 0 10%;
+}
+
+.layout_03_img_e7a {
+    margin: 19% 23% 0 9%;
+}
+
+.layout_03_img_e7b {
+    margin: 6% 23% 0 9%;
+}
+
+.layout_03_tek_e7 {
+    margin: 10% 12% 0 9%;
+}
+
+/* ---------- Tema 04 ---------- */
+.layout_04_tek_e1 {
+    margin: 24% 2% 0 6%;
+}
+
+.layout_04_img_e1 {
+    margin: 12% 11% 0 10%;
+}
+
+.layout_04_img_e2a {
+    margin: 20% 12% 0 10%;
+}
+
+.layout_04_img_e2b {
+    margin: 7% 12% 0 10%;
+}
+
+.layout_04_img_e2c {
+    margin: 7% 42% 0 10%;
+}
+
+.layout_04_tek_e3 {
+    margin: 13% 5% 0 9%;
+}
+
+.layout_04_img_e4a {
+    margin: 15% 36% 0 10%;
+}
+
+.layout_04_img_e4b {
+    margin: 5% 14% 0 10%;
+}
+
+.layout_04_tek_e4 {
+    margin: 8% 5% 0 9%;
+}
+
+/* ---------- Tema 05 ---------- */
+.layout_05_tek_e1 {
+    margin: 29% 5% 0 9%;
+}
+
+.layout_05_img_e1 {
+    margin: 5% 13% 0 9%;
+}
+
+.layout_05_tek_e2 {
+    margin: 14% 5% 0 9%;
+}
+
+.layout_05_img_e2 {
+    margin: 2% 5% 0 3%;
+}
+
+.layout_05_img_e3a {
+    margin: 14% 10% 0 14%;
+}
+
+.layout_05_img_e3b {
+    margin: 14% 10% 0 14%;
+}
+
+.layout_05_tek_e3 {
+    margin: 8% 5% 0 9%;
+}
+
+.layout_05_tek_e4 {
+    margin: 12% 5% 0 9%;
+}
+
+.layout_05_img_e4 {
+    margin: 6% 14% 0 9%;
+}
+
+.layout_05_tek_e5 {
+    margin: 12% 5% 0 9%;
+}
+
+.layout_05_img_e5 {
+    margin: 7% 7% 0 9%;
+}
+
+/* ---------- Om ---------- */
+.layout_om_tek_e1 {
+    grid-column: 1/span2;
+    margin: 7% 5% 0 9%;
+}
+
+.layout_om_img_e1a {
+    margin: 32% 12% 0 38%;
+}
+
+.layout_om_img_e1b {
+    margin: 11% 12% 0 0;
+}
+
+.layout_om_tek_e2a {
+    margin: 17% 5% 0 9%;
+}
+
+.layout_om_tek_e2b {
+    margin: 5% 5% 0 9%;
+}
+
+.layout_om_iko_e2 {
+    margin: 18% 5% 0 9%;
+}
+
+.layout_om_img_e2c {
+    margin: 15% 5% 0 9%;
+}
+
+.layout_om_img_e2d {
+    margin: 5% 5% 0 9%;
+}
+
+.layout_om_tek_e2c {
+    margin: 14% 5% 0 9%;
+}
+
+.layout_om_tek_e2d {
+    margin: 19% 5% 0 9%;
+}
+
+.layout_om_iko_e3 {
+    margin: 19% 32% 0 10%;
+}
+
+.layout_om_tek_e3 {
+    margin: 12% 0% 0 9%;
+}
+
+.layout_knap_e3 {
+    margin: 14% 20% 0 9%;
+}
+
+}
+
+
+/* ------------------------------ DESKTOP ------------------------------ */
+  @media (min-width: 800px) {
+/* ------------------------------ Tekst ------------------------------ */
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 8vw;
+}
+
+h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 5vw;
+}
+
+h3 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 4vw;
+}
+
+h4 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3vw;
+}
+
+h5 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2vw;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2vw;
+    line-height: 1.6;
+}
+
+.tekst_afsnit {
+    margin-bottom: 3%;
+}
+
+.tekst_afsnit_om {
+    margin-bottom: 4%;
+}
+
+/* ------------------------------ Baggrund ------------------------------ */
+.baggrund_forside {
+    background-image: url(indhold/gitter/gitter_forside.webp);
+    background-size: 100%;
+    padding-bottom: 45px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_portfolio {
+    background-image: url(indhold/gitter/gitter_portfolio.webp);
+    background-size: 100%;
+    padding-bottom: 45px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_tema02 {
+    background-image: url(indhold/gitter/gitter_tema2.webp);
+    background-size: 100%;
+    padding-bottom: 45px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_tema03 {
+    background-image: url(indhold/gitter/gitter_tema3.webp);
+    background-size: 100%;
+    padding-bottom: 45px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_tema04 {
+    background-image: url(indhold/gitter/gitter_tema4.webp);
+    background-size: 100%;
+    padding-bottom: 45px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_tema05 {
+    background-image: url(indhold/gitter/gitter_tema5.webp);
+    background-size: 100%;
+    padding-bottom: 45px;
+    background-repeat: no-repeat;
+}
+
+.baggrund_om {
+    background-image: url(indhold/gitter/gitter_om.webp);
+    background-size: 100%;
+    padding-bottom: 45px;
+    background-repeat: no-repeat;
+}
+
+/* ------------------------------ Footer ------------------------------ */
+/* ---------- Grids til footer ---------- */
+.grid_1-1-1-1_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.grid_1-1-1_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+}
+
+/* ---------- Layout footer - Forside ---------- */
+.layout_footer_fo_1 {
+    margin: 49% 0 0 0;
+}
+
+.layout_footer_fo_2 {
+    margin: 48% 30% 0 30%;
+}
+.layout_footer_fo_3 {
+    margin: 49% 0 0 0;
+}
+.layout_footer_fo_4 {
+    margin: 47% 0 0 0;
+}
+
+/* ---------- Layout footer - Portfolio ---------- */
+.layout_footer_po_1 {
+    margin: 69% 0 0 0;
+}
+
+.layout_footer_po_2 {
+    margin: 67% 30% 0 30%;
+}
+.layout_footer_po_3 {
+    margin: 69% 0 0 0;
+}
+.layout_footer_po_4 {
+    margin: 66% 0 0 0;
+}
+
+/* ---------- Layout footer - Tema 02 ---------- */
+.layout_footer_02_1 {
+    margin: 48% 0 0 0;
+}
+
+.layout_footer_02_2 {
+    margin: 47% 30% 0 30%;
+}
+.layout_footer_02_3 {
+    margin: 48% 0 0 0;
+}
+.layout_footer_02_4 {
+    margin: 46% 0 0 0;
+}
+
+/* ---------- Layout footer - Tema 03 ---------- */
+.layout_footer_03_1 {
+    margin: 58% 0 0 0;
+}
+
+.layout_footer_03_2 {
+    margin: 56% 30% 0 30%;
+}
+.layout_footer_03_3 {
+    margin: 58% 0 0 0;
+}
+.layout_footer_03_4 {
+    margin: 55% 0 0 0;
+}
+
+/* ---------- Layout footer - Tema 04 ---------- */
+.layout_footer_04_1 {
+    margin: 51% 0 0 0;
+}
+
+.layout_footer_04_2 {
+    margin: 49% 30% 0 30%;
+}
+.layout_footer_04_3 {
+    margin: 51% 0 0 0;
+}
+.layout_footer_04_4 {
+    margin: 48% 0 0 0;
+}
+
+/* ---------- Layout footer - Tema 05 ---------- */
+.layout_footer_05_1 {
+    margin: 51% 0 0 0;
+}
+
+.layout_footer_05_2 {
+    margin: 50% 30% 0 30%;
+}
+.layout_footer_05_3 {
+    margin: 51% 0 0 0;
+}
+.layout_footer_05_4 {
+    margin: 49% 0 0 0;
+}
+
+/* ---------- Layout footer - Om ---------- */
+.layout_footer_om_1 {
+    margin: 54% 0 0 0;
+}
+
+.layout_footer_om_2 {
+    margin: 52% 30% 0 30%;
+}
+.layout_footer_om_3 {
+    margin: 54% 0 0 0;
+}
+.layout_footer_om_4 {
+    margin: 51% 0 0 0;
+}
+
+
+/* ------------------------------ Grid ------------------------------ */
+.grid_1-1-1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 12%;
+}
+
+.grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid_1-1_boks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+}
+
+.grid_1-1_boks_portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 6.5%;
+    gap: 8%;
+}
+
+.grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8%;
+}
+
+.grid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.grid_16-1 {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+}
+
+.grid_2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.grid_2-2 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+
+.grid_2-2-1 {
+    display: grid;
+    grid-template-columns: 2.2fr 2fr 1fr;
+}
+
+.grid_2-3 {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 5%;
+}
+
+.grid_2-4 {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+}
+
+.grid_3-1 {
+    display: grid;
+    grid-template-columns: 3.3fr 1fr;
+    gap: 8%;
+}
+
+.grid_3-1-3 {
+    display: grid;
+    grid-template-columns: 4fr 1fr 3fr;
+}
+
+.grid_3-2 {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.grid_3-4 {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+}
+
+.grid_5-2 {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
+
+
+
+/* ------------------------------ Layout ------------------------------ */
+/* ---------- Forside ---------- */
+.layout_fo_tek_e1 {
+    margin: 18% 10% 10% 8%;
+}
+
+.layout_fo_iko_e1 {
+    margin: 18% 10% 5% 8%;
+}
+
+.layout_fo_tek_e2 {
+    margin: 5% 5% 5% 65%;
+}
+
+.layout_fo_img_e4 {
+    padding: 24% 0% 0% 29%;
+}
+
+.layout_fo_tek_e4a {
+    padding: 17% 5% 5% 5%;
+    display: grid;
+    gap: 15%;
+}
+
+.layout_fo_tek_e4b {
+    padding: 5% 5% 5% 5%;
+    display: grid;
+    gap: 40%;
+}
+
+.layout_fo_knap {
+    padding: 0% 70% 0% 0%;
+}
+
+.layout_al_knap {
+    margin: 12% 15% 5% 15%;
+}
+
+.layout_fo_boks {
+    margin: 6% 25% 0 35%;
+}
+
+/* ---------- Portfolio ---------- */
+.layout_al_tek_e1 {
+    margin: 0 0 0.8% 9.5%;
+}
+
+.layout_po_tek_e3a {
+    margin: 2% 5% 5% 16%;
+}
+
+.layout_po_tek_e3b {
+    margin: 10% 5% 5% 16%;
+    display: grid;
+    gap: 15%;
+}
+
+.layout_po_boks {
+    margin: 8% 9% 0 25%;
+}
+
+/* ---------- Tema 02 ---------- */
+.layout_al_tek_e2 {
+    margin: 1.5% 5% 5% 14%;
+    display: grid;
+    gap: 36%;
+}
+
+.layout_02_img_e1 {
+    margin: 29% 0 0 25%;
+}
+
+.layout_02_tek_e1 {
+    margin: 18% 5% 0 0%;
+}
+
+.layout_02_tek_e2 {
+    margin: 7% 0 0 16%;
+}
+
+.layout_02_img_e2 {
+    margin: 11% 23% 0 10%;
+}
+
+.layout_02_img_e3 {
+    margin: 18% 0 0 33%;
+}
+
+.layout_02_tek_e3 {
+    margin: 9% 21% 0 0;
+}
+
+/* ---------- Tema 03 ---------- */
+.layout_03_tek_e1 {
+    margin: 7.7% 2% 0 9%;
+}
+
+.layout_03_img_e2 {
+    margin: 9% 6% 0 21%;
+}
+
+.layout_03_tek_e2 {
+    margin: 8% 5% 0 0;
+}
+
+.layout_03_tek_e3 {
+    margin: 8% 6% 0 15%;
+}
+
+.layout_03_img_e3 {
+    margin: 12% 0 0 0;
+}
+
+.layout_03_img_e3a {
+    margin: 0 12% 0 15%;
+}
+
+.layout_03_img_e3b {
+    margin: 0 9% 0 0;
+}
+
+.layout_03_img_e4 {
+    margin: 11% 11% 0 28%;
+}
+
+.layout_03_tek_e4 {
+    margin: 10% 7% 0 0;
+}
+
+.layout_03_tek_e5 {
+    margin: 10% 0 0 14%;
+}
+
+.layout_03_img_e5a {
+    margin: 10% 15% 0 25%;
+}
+
+.layout_03_img_e5b {
+    margin: 22% 15% 0 25%;
+}
+
+.layout_03_tek_e6 {
+    margin: 8% 5% 0 16%;
+}
+
+.layout_03_img_e6 {
+    margin: 12% 20% 0 12%;
+}
+
+.layout_03_img_e7a {
+    margin: 15% 5% 0 33%;
+}
+
+.layout_03_img_e7b {
+    margin: 22% 0 0 6%;
+}
+
+.layout_03_tek_e7 {
+    margin: 10% 5% 0 9%;
+}
+
+.layout_al_knap_2 {
+    display: grid;
+    gap: 11%;
+    margin: 4% 21% 5% 21%;
+}
+
+/* ---------- Tema 04 ---------- */
+.layout_04_tek_e1 {
+    margin: 12.5% 0 0 15%;
+}
+
+.layout_04_img_e1 {
+    margin: 24% 6% 0 39%;
+}
+
+.layout_04_img_e2a {
+    margin: 8% 12% 0 24%;
+}
+
+.layout_04_img_e2b {
+    margin: 9% 29% 0 0;
+}
+
+.layout_04_img_e2c {
+    margin: 16% 27% 0 13%;
+}
+
+.layout_04_tek_e3 {
+    margin: 5% 29% 0 10%;
+}
+
+.layout_04_img_e4a {
+    margin: 30% 5% 0 53%;
+}
+
+.layout_04_img_e4b {
+    margin: 30% 0 0 0;
+}
+
+.layout_04_tek_e4 {
+    margin: 11% 6% 0 5%;
+}
+
+/* ---------- Tema 05 ---------- */
+.layout_05_tek_e1 {
+    margin: 12.5% 0 0 14%;
+}
+
+.layout_05_img_e1 {
+    margin: 35% 9% 0 18%;
+}
+
+.layout_05_tek_e2 {
+    margin: 19% 9% 0 17%;
+}
+
+.layout_05_img_e2 {
+    margin: 38% 8% 0 8%;
+}
+
+.layout_05_img_e3a {
+    margin: 25% 5% 0 37%;
+}
+
+.layout_05_img_e3b {
+    margin: 40% 3% 0 5%;
+}
+
+.layout_05_tek_e3 {
+    margin: 8% 6% 0 8%;
+}
+
+.layout_05_tek_e4 {
+    margin: 8% 5% 0 16%;
+}
+
+.layout_05_img_e4 {
+    margin: 11% 13% 0 5%;
+}
+
+.layout_05_tek_e5 {
+    margin: 5% 0 0 14%;
+}
+
+.layout_05_img_e5 {
+    margin: 24% 17% 0 15%;
+}
+
+/* ---------- Om ---------- */
+.layout_om_tek_e1 {
+    margin: 3% 0 0 20%;
+}
+
+.layout_om_img_e1a {
+    margin: 15% 0 0 57%;
+}
+
+.layout_om_img_e1b {
+    margin: 4% 7% 0 15%;
+}
+
+.layout_om_tek_e2a {
+    margin: 14% 0 0 30%;
+}
+
+.layout_om_tek_e2b {
+    margin: 5% 0 0 34%;
+}
+
+.layout_om_iko_e2 {
+    margin: 5.2% 5% 0 5%;
+}
+
+.layout_om_img_e2c {
+    margin: 14% 0 0 5%;
+}
+
+.layout_om_img_e2d {
+    margin: 5% 0 0 11%;
+}
+
+.layout_om_tek_e2c {
+    margin: 12% 0 0 13%;
+}
+
+.layout_om_tek_e2d {
+    margin: 9% 0 0 18%;
+}
+
+.layout_om_iko_e3 {
+    margin: 21% 0% 0 44%;
+}
+
+.layout_om_tek_e3 {
+    margin: 20% 0 0 9%;
+}
+
+.layout_knap_e3 {
+    margin: 19% 17% 0 5%;
+}
+
+}
+
+/* ------------------------------ Effekter på desktop og mobil - inspireret af Chat GPT og aflevering Tema 04 ------------------------------ */
+/* Effekter på bokse */
+.scale_op_effekt {
+    transform: scale(1.1);
+    transition: 500ms ease;
+  }
+
+  .scale_ned_effekt {
+    transform: scale(1);
+    transition: 500ms ease;
+  }
+
+/* Effekter på links */
+.link_effekt {
+    text-decoration: none;
+    color: black;
+}
+
+.link_effekt :hover {
+    text-decoration: underline;
+}
+
+.link_effekt2 {
+    text-decoration: none;
+    color: black;
+}
+
+.link_effekt2 :hover {
+    transform: scale(1.1);
+    transition: 500ms ease;
+}
+
+.link_effekt3 {
+    text-decoration: none;
+    color: black;
+}
+
+.link_effekt3 :hover {
+    transform: scale(1.08);
+    transition: 500ms ease;
+}
+
+/* Effekt på forsiden */
+#banner {
+    background-color: black;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    /* padding: 20px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-left: 6%;
+  }
+
+  #tekst {
+    top: -100%;
+    position: absolute;
+    margin: 5% 30% 5% 30%;
+  }
+
+  #tekst2 {
+    top: -100%;
+    position: absolute;
+    margin: 5% 30% 5% 30%;
+  }
+
+  #tekst3 {
+    top: -100%;
+    position: absolute;
+    margin: 5% 30% 5% 30%;
+  }
+
+  #tekst4 {
+    top: -100%;
+    position: absolute;
+    margin: 5% 30% 5% 30%;
+  }
+
+  #tekst5 {
+    top: -100%;
+    position: absolute;
+    margin: 5% 30% 5% 30%;
+  }
+
+.rotated-text {
+    transform: rotate(270deg);
+    color: rgb(235, 236, 233);
+    width: auto;
+  }
+
+  @keyframes fald {
+    from {
+      transform: translateY(-200%);
+    }
+    to {
+      transform: translateY(600%);
+    }
+  }
+  
+  .fald {
+    animation: fald 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+
+  #screen {
+    width: 100%;
+    aspect-ratio: 16/19.86;
+    position: relative;
+    container-type: inline-size;
+    overflow: hidden;
+    background-image: url(indhold/webp/forside_billede.webp);
+    background-size: cover;
+}
+
+.delay1 {
+    animation-delay: 1s;
+  }
+
+  .delay2 {
+    animation-delay: 2s;
+  }
+
+  .delay3 {
+    animation-delay: 3s;
+  }
+
+  .delay4 {
+    animation-delay: 4s;
+  }
+
+
+ /* REFENRECE */
+ /* Midjourney AI: indhold/webp/forside_billede.webp */
